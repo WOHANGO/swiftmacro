@@ -211,6 +211,9 @@ func kArrayIsEmpty(_ array: [String]) -> Bool {
     if str == nil {
         return true
     }
+    if str == "(null)" {
+        return true
+    }
     if array.count == 0 {
         return true
     }
@@ -227,6 +230,9 @@ func kArrayIsEmpty(_ array: [String]) -> Bool {
 func kDictIsEmpty(_ dict: NSDictionary) -> Bool {
     let str: String! = "\(dict)"
     if str == nil {
+        return true
+    }
+    if str == "(null)" {
         return true
     }
     if dict .isKind(of: NSNull.self) {

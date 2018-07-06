@@ -53,7 +53,7 @@ let kColor_0000ff = kHexColor("0000ff")     //大蓝
 
 
 
-//开发的时候打印，但是发布的时候不打印的NSLog
+//开发的时候打印，但是发布的时候不打印,使用方法，输入print(message: "输入")
 func print<T>(message: T, fileName: String = #file, methodName: String = #function, lineNumber: Int = #line) {
     #if DEBUG
     //获取当前时间
@@ -66,6 +66,7 @@ func print<T>(message: T, fileName: String = #file, methodName: String = #functi
     print("\(dformatter.string(from: now)) [\(lastName)][第\(lineNumber)行] \n\t\t \(message)")
     #endif
 }
+
 // UserDefaults 操作
 let kUserDefaults = UserDefaults.standard
 func kUserDefaultsRead(_ KeyStr: String) -> String {
@@ -94,6 +95,12 @@ let kiOS11 = (kVersion >= 11.0 && kVersion < 12.0)
 let kiOS10 = (kVersion >= 10.0 && kVersion < 11.0)
 let kiOS9 = (kVersion >= 9.0 && kVersion < 10.0)
 let kiOS8 = (kVersion >= 8.0 && kVersion < 9.0)
+let kiOS12Later = (kVersion >= 12.0)
+let kiOS11Later = (kVersion >= 11.0)
+let kiOS10Later = (kVersion >= 10.0)
+let kiOS9Later = (kVersion >= 9.0)
+let kiOS8Later = (kVersion >= 8.0)
+
 
 
 
